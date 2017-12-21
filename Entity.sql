@@ -1,0 +1,13 @@
+USE TEST1
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Entity](
+	[EntityID] [int] IDENTITY(1,1) NOT NULL,
+	[ClassID] [int] NULL,
+	[EntityName] [nvarchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+) ON [PRIMARY]
+GO

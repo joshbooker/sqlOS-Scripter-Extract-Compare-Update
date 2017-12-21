@@ -1,5 +1,5 @@
-USE LEARNING
+USE TEST1
 GO
-ALTER TABLE [dbo].[iSets]
-	ADD [Name2] [nvarchar](max) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+ALTER TABLE dbo.Entity
+ADD [Description] [nvarchar](255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
 
