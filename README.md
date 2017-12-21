@@ -10,3 +10,5 @@ This simple project is to explore the command line capabilites for Extract, Comp
 
 Here is a suggestion to add such features to SOS:
 [SSDT-style Import from database and sqlpackage.exe integration (extract, compare, update, publish, etc.)](https://github.com/Microsoft/sqlopsstudio/issues/389)
+
+https://github.com/Microsoft/sqlopsstudio/issues/389
