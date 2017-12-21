@@ -13,38 +13,35 @@ Here is a suggestion to add such features to SOS:
 
 https://github.com/Microsoft/sqlopsstudio/issues/389
 
-
-Clone this to a local folder
-open in SOS
-change paths and variables in environment.bat
-in teminal cmd.exe
-  execute Creatdbs
-  change Databasename in /SQL/CreateDatabase.sqlcmd.sql
-  execute CreateDbs again
+##How To:
+-Clone this repo to a local folder
+-Open the directory in SOS
+-change paths and variables in environment.bat
+-in cmd terminal:
+--execute 'Creatdbs.cmd'
+--change DatabaseName in /SQL/CreateDatabase.sqlcmd.sql
+--execute CreateDbs.cmd again
+You now have two empty databases
   
-  You now have two empty databases
+-open Entity.sql and execute on source database
+You now have a table called Entity in the source db
   
-  open Entity.sql and Execute on source database
-  You now have a table called Entity in the source db
+-execute the following in cmd terminal
+--`extract.cmd`
+--`compare.cmd`
+This will create dacpacs and a delta script called 'CompareUpdate_%UpdateVersion%.sqlcmd.sql showing the diffenece in schema between the two dbs. Swell!
   
-  now execute the following in terminal cmd.exe
-    extract.cmd
-    compare.cmd
-    
-  This will create dacpacs and a delta script showing the diffenece in schema between the two dbs
+  -In cmd terminal, execute `update.cmd` to apply the delta script to the target db
+  Now your databases are the same.  Woot!
   
-  exuecute update.cmd to apply the script
+  -Open and execute AlterTable.sql
   
-  now your databases are the same
-  
-  open and execute AlterTable.sql
-  
-  Change Update Version and then do 
-    extract.cmd
-    compare.cmd
-    
+-Change UpdateVersion in environment.bat
+-Then execute the following in cmd terminal
+--`extract.cmd`
+--`compare.cmd`
 Now you should have a new delta update script
 
-execute update.cmd to apply the script
+-execute update.cmd to apply the script
 
   
