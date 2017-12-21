@@ -12,3 +12,39 @@ Here is a suggestion to add such features to SOS:
 [SSDT-style Import from database and sqlpackage.exe integration (extract, compare, update, publish, etc.)](https://github.com/Microsoft/sqlopsstudio/issues/389)
 
 https://github.com/Microsoft/sqlopsstudio/issues/389
+
+
+Clone this to a local folder
+open in SOS
+change paths and variables in environment.bat
+in teminal cmd.exe
+  execute Creatdbs
+  change Databasename in /SQL/CreateDatabase.sqlcmd.sql
+  execute CreateDbs again
+  
+  You now have two empty databases
+  
+  open Entity.sql and Execute on source database
+  You now have a table called Entity in the source db
+  
+  now execute the following in terminal cmd.exe
+    extract.cmd
+    compare.cmd
+    
+  This will create dacpacs and a delta script showing the diffenece in schema between the two dbs
+  
+  exuecute update.cmd to apply the script
+  
+  now your databases are the same
+  
+  open and execute AlterTable.sql
+  
+  Change Update Version and then do 
+    extract.cmd
+    compare.cmd
+    
+Now you should have a new delta update script
+
+execute update.cmd to apply the script
+
+  
