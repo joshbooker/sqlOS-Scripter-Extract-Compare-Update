@@ -8,6 +8,8 @@ rem --SQL Server Name
 SET Server=DESKTOP-R5ANG0N
 rem --Path of this project
 SET ProjectPath=C:\SOURCE\SQLOps\LearningProject
+rem --directory in project to output create scripts
+SET DbsPath=DATABASES
 rem --directory in project to output dacpac files
 SET DacPath=DAC
 rem --directory in project to output sql scripts
