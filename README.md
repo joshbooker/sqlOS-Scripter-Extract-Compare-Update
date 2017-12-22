@@ -49,6 +49,6 @@ Now you should have a new delta update script.
 - execute the following in cmd terminal
   - `update.cmd` 
 
-Now you databases are the same again.
+Now your databases are the same again.
 
 If you extract and compare again you'll get a delta script that doesn't make any changes.
