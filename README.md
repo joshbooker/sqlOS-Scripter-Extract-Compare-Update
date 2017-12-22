@@ -13,35 +13,40 @@ Here is a suggestion to add such features to SOS:
 
 https://github.com/Microsoft/sqlopsstudio/issues/389
 
-##How To:
--Clone this repo to a local folder
--Open the directory in SOS
--change paths and variables in environment.bat
--in cmd terminal:
---execute 'Creatdbs.cmd'
---change DatabaseName in /SQL/CreateDatabase.sqlcmd.sql
---execute CreateDbs.cmd again
+## How To:  
+- Clone this repo to a local directory  
+- Open the directory in SOS
+- change paths and variables in `environment.bat`
+- in cmd terminal:
+  - execute `Creatdbs.cmd`
+  - change DatabaseName in `/SQL/CreateDatabase.sqlcmd.sql`
+  - execute `CreateDbs.cmd` again
+  
 You now have two empty databases
   
--open Entity.sql and execute on source database
-You now have a table called Entity in the source db
+- open Entity.sql and execute on source database
+
+You now have a table called `Entity` in the source db
   
--execute the following in cmd terminal
---`extract.cmd`
---`compare.cmd`
-This will create dacpacs and a delta script called 'CompareUpdate_%UpdateVersion%.sqlcmd.sql showing the diffenece in schema between the two dbs. Swell!
+- execute the following in cmd terminal
+  - `extract.cmd`
+  - `compare.cmd`
   
-  -In cmd terminal, execute `update.cmd` to apply the delta script to the target db
-  Now your databases are the same.  Woot!
+This will create dacpacs and a delta script called `CompareUpdate_%UpdateVersion%.sqlcmd.sql` showing the diffenece in schema between the two dbs. Swell!
   
-  -Open and execute AlterTable.sql
+- In cmd terminal, execute `update.cmd` to apply the delta script to the target db
+Now your databases are the same.  Woot!
   
--Change UpdateVersion in environment.bat
--Then execute the following in cmd terminal
---`extract.cmd`
---`compare.cmd`
+- Open and execute `AlterTable.sql`
+- Change UpdateVersion in `environment.bat`
+- Then execute the following in cmd terminal
+  - `extract.cmd`
+  - `compare.cmd`
+  
 Now you should have a new delta update script
 
--execute update.cmd to apply the script
+- execute update.cmd to apply the script
 
-  
+Now you databases are the same again.
+
+If you extract and compare again you'll get a delta script that doesn't make any changes.
