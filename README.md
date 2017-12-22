@@ -19,8 +19,8 @@ https://github.com/Microsoft/sqlopsstudio/issues/389
 - change paths and variables in `environment.bat`
 - in cmd terminal:
   - execute `Creatdbs.cmd`
-  - change DatabaseName in `/SQL/CreateDatabase.sqlcmd.sql`
-  - execute `CreateDbs.cmd` again
+- change DatabaseName in `/SQL/CreateDatabase.sqlcmd.sql`
+- execute `CreateDbs.cmd` again
   
 You now have two empty databases
   
