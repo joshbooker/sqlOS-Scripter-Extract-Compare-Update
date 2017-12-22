@@ -30,13 +30,13 @@ You now have a table called `Entity` in the source db.
   - `extract.cmd`
   - `compare.cmd`
   
-This will create dacpacs and a delta script called `CompareUpdate_%UpdateVersion%.sqlcmd.sql` showing the diffenece in schema between the two dbs. **Swell!
+This will create dacpacs and a delta script called `CompareUpdate_%UpdateVersion%.sqlcmd.sql` showing the diffenece in schema between the two dbs.   **Swell!**
   
 - execute the following in cmd terminal
   - `update.cmd` 
   
 This will apply the delta script to the target db.
-Now your databases are the same.  **Woot!
+Now your databases are the same.   **Woot!**
   
 - Open `AlterTable.sql` and execute on source database
 - Change UpdateVersion variable in `environment.bat`
