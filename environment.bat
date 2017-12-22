@@ -17,4 +17,4 @@ SET Source=TEST1
 rem --target database name
 SET Target=TEST2
 rem --version string for CompareUpdate Script file name
-SET CompareVersion=2017-12-24
+SET CompareVersion=2017-12-28
