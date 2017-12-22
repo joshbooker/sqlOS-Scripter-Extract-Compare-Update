@@ -1,5 +1,9 @@
-rem --SSDT directory to PATH variable
+rem --add SSDT directory to PATH variable - this is the directory which contains sqlpackage.exe
 SET PATH=%PATH%;"C:\Program Files (x86)\Microsoft SQL Server\130\DAC\bin"
+rem --directory for mdf
+SET DefaultDataPath="c:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\DATA\"
+rem --directory for ldf
+SET DefaultLogPath="c:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\DATA\"
 rem --SQL Server Name
 SET Server=DESKTOP-R5ANG0N
 rem --Path of this project

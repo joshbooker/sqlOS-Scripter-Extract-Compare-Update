@@ -17,35 +17,37 @@ https://github.com/Microsoft/sqlopsstudio/issues/389
 - Clone this repo to a local directory  
 - Open the directory in SOS
 - change paths and variables in `environment.bat`
-- in cmd terminal:
-  - execute `Creatdbs.cmd`
-- change DatabaseName in `/SQL/CreateDatabase.sqlcmd.sql`
-- execute `CreateDbs.cmd` again
+- execute the following in cmd terminal
+  - `Createdbs.cmd`
   
-You now have two empty databases
+You now have two empty databases.
   
-- open Entity.sql and execute on source database
+- open `Entity.sql` and execute on source database
 
-You now have a table called `Entity` in the source db
+You now have a table called `Entity` in the source db.
   
 - execute the following in cmd terminal
   - `extract.cmd`
   - `compare.cmd`
   
-This will create dacpacs and a delta script called `CompareUpdate_%UpdateVersion%.sqlcmd.sql` showing the diffenece in schema between the two dbs. Swell!
+This will create dacpacs and a delta script called `CompareUpdate_%UpdateVersion%.sqlcmd.sql` showing the diffenece in schema between the two dbs. **Swell!
   
-- In cmd terminal, execute `update.cmd` to apply the delta script to the target db
-Now your databases are the same.  Woot!
+- execute the following in cmd terminal
+  - `update.cmd` 
   
-- Open and execute `AlterTable.sql`
-- Change UpdateVersion in `environment.bat`
-- Then execute the following in cmd terminal
+This will apply the delta script to the target db.
+Now your databases are the same.  **Woot!
+  
+- Open `AlterTable.sql` and execute on source database
+- Change UpdateVersion variable in `environment.bat`
+- execute the following in cmd terminal
   - `extract.cmd`
   - `compare.cmd`
   
-Now you should have a new delta update script
+Now you should have a new delta update script.
 
-- execute update.cmd to apply the script
+- execute the following in cmd terminal
+  - `update.cmd` 
 
 Now you databases are the same again.
 

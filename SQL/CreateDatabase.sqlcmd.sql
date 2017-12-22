@@ -1,10 +1,10 @@
 USE [master]
 GO
 
-:setvar DatabaseName "TEST2"
-:setvar DefaultFilePrefix "TEST1"
-:setvar DefaultDataPath "c:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\DATA\"
-:setvar DefaultLogPath "c:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\DATA\"
+--:setvar DatabaseName "TEST2"
+--:setvar DefaultFilePrefix "TEST1"
+--:setvar DefaultDataPath "c:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\DATA\"
+--:setvar DefaultLogPath "c:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\DATA\"
 
 GO
 :on error exit
