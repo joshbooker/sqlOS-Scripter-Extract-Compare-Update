@@ -1,6 +1,7 @@
 rem --load environ variables
 call environment
+
 rem --create dacpac for source database schema
-sqlpackage.exe /a:Extract /scs:Server=%Server%;Database=%Source%;TRUSTED_CONNECTION=True; /tf:%ProjectPath%\%DacPath%\%Source%_source.dacpac
+sqlpackage.exe /a:Extract /scs:%SourceConnString% /tf:%SourceDacpac%
 rem --create dacpac for target database schema
-sqlpackage.exe /a:Extract /scs:Server=%Server%;Database=%Target%;TRUSTED_CONNECTION=True; /tf:%ProjectPath%\%DacPath%\%Target%_target.dacpac
+sqlpackage.exe /a:Extract /scs:%TargetConnString% /tf:%TargetDacpac%
