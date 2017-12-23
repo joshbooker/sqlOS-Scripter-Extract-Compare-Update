@@ -1,4 +1,4 @@
-# SOS_ExtractCompareUpdate
+# sqlOS-Scripter-Extract-Compare-Update
 
 [SQL Ops Studio](https://docs.microsoft.com/en-us/sql/sql-operations-studio/what-is) is a neat dev environment for SQL Server based on VSCode shell.  
 
