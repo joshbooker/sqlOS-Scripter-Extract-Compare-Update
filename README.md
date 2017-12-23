@@ -14,8 +14,8 @@ Here is a suggestion to add such features to SOS:
 https://github.com/Microsoft/sqlopsstudio/issues/389
 ## **Prerequisites:**
 - Install the following:
-  - SSDT DACFx
-  - mssql-scripter
+  - [SSDT DACFx](https://www.microsoft.com/en-us/download/details.aspx?id=56356)
+  - [mssql-scripter](https://github.com/Microsoft/mssql-scripter/blob/dev/doc/installation_guide.md)
 
 ## **Setup:**
 
