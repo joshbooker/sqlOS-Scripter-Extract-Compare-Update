@@ -25,7 +25,7 @@ https://github.com/Microsoft/sqlopsstudio/issues/389
 
 ## **Usage:**
 
-### **Generate Create Scripts:**
+### **Generate CREATE Scripts:**
 - execute the following in cmd terminal
   - `Scripter.cmd`
 
@@ -43,7 +43,7 @@ Now you have one Create script per object in the source database organized in yo
 
 **Swell!**
 
-### **Extract, Compare, Update:** 
+### **Setup Test DBs (optional):** 
 - execute the following in cmd terminal
   - `Createdbs.cmd`
   
@@ -52,21 +52,24 @@ You now have two empty databases.
 - open `Entity.sql` and execute on source database
 
 You now have a table called `Entity` in the source db.
-  
+
+### **Extract, Compare, Update:**   
 - execute the following in cmd terminal
   - `extract.cmd`
   - `compare.cmd`
   
-This will create dacpacs and a delta script called `CompareUpdate_%UpdateVersion%.sqlcmd.sql` showing the diffenece in schema between the two dbs.   
+This will execute sqlpackage.exe to create dacpacs and a delta script called `%DatabaseName%_CompareUpdate_%UpdateVersion%.sqlcmd.sql` showing the diffenece in schema between the two dbs.   
 **Neat!**
   
 - execute the following in cmd terminal
   - `update.cmd` 
   
-This will apply the delta script to the target db.
+This will execute sqlcmd.exe to apply the delta script to the target db.
 Now your databases are the same.   
 **Woot!**
-  
+
+
+### **Make a change and test compare (optional):**   
 - Open `AlterTable.sql` and execute on source database
 - Change UpdateVersion variable in `environment.bat`
 - execute the following in cmd terminal
@@ -81,3 +84,5 @@ Now you should have a new delta update script.
 Now your databases are the same again.
 
 If you extract and compare again you'll get a delta script that doesn't make any changes.
+
+**Hint:**  Don't forget to change UpdateVersion variable in `environment.bat` between each compare or it will overwrite the prior delta script.
