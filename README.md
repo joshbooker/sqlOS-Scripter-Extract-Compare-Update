@@ -14,8 +14,16 @@ Here is a suggestion to add such features to sqlOS:
 https://github.com/Microsoft/sqlopsstudio/issues/389
 ## **Prerequisites:**
 - Install the following:
-  - [SSDT DACFx](https://www.microsoft.com/en-us/download/details.aspx?id=56356)
-  - [mssql-scripter](https://github.com/Microsoft/mssql-scripter/blob/dev/doc/installation_guide.md)
+  - WINDOWS
+    - [mssql-scripter](https://github.com/Microsoft/mssql-scripter/blob/dev/doc/installation_guide.md)
+    - [SSDT DACFx](https://www.microsoft.com/en-us/download/details.aspx?id=56356)
+  - LINUX or MAC
+    - [mssql-scripter](https://github.com/Microsoft/mssql-scripter/blob/dev/doc/installation_guide.md)
+    - [sqlcmd for linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools)
+    - [cross-plat sqlpackage](https://github.com/Microsoft/mssql-docker/issues/135#issuecomment-389245587) (preview)
+    
+I've only tested on Windows so mileage may vary.  The cross-plat sqlpackage preview works great on Windows!
+
 
 ## **Setup:**
 

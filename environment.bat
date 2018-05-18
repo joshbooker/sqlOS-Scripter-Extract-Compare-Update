@@ -1,5 +1,5 @@
 rem --add DACFx directory to PATH variable - this is the directory which contains sqlpackage.exe
-SET PATH=%PATH%;"C:\Program Files (x86)\Microsoft SQL Server\130\DAC\bin"
+SET PATH="C:\SqlPackage";%PATH%;
 rem --directory for mdf
 SET DefaultDataPath="c:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\DATA\"
 rem --directory for ldf
@@ -21,7 +21,7 @@ SET Source=TEST1
 rem --target database name
 SET Target=TEST3
 rem --version string for CompareUpdate Script file name
-SET CompareVersion=2017-12-28
+SET CompareVersion=2018-05-18
 
 SET SourceConnString=Server=%SourceServer%;Database=%Source%;TRUSTED_CONNECTION=True;
 SET TargetConnString=Server=%TargetServer%;Database=%Target%;TRUSTED_CONNECTION=True;
