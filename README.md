@@ -33,6 +33,8 @@ I've only tested on Windows so mileage may vary.  The cross-plat sqlpackage prev
 - Open the directory in sqlOS
 - change paths and variables in `environment.bat`
 
+![Alt Text](https://joshbooker.github.io/DEMO1_cloneRepo.gif)
+
 ## **Usage:**
 
 ### **Generate CREATE Scripts:**
@@ -53,6 +55,8 @@ Now you have one Create script per object in the source database organized in yo
 
 **Swell!**
 
+![Alt Text](https://joshbooker.github.io/DEMO3_scripter.gif)
+
 ### **Setup Test DBs (optional):** 
 - execute the following in cmd terminal
   - `Createdbs.cmd`
@@ -62,6 +66,8 @@ You now have two empty databases.
 - open `Entity.sql` and execute on source database
 
 You now have a table called `Entity` in the source db.
+
+![Alt Text](https://joshbooker.github.io/DEMO2_createDBs.gif)
 
 ### **Extract, Compare, Update:**   
 - execute the following in cmd terminal
