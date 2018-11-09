@@ -11,6 +11,9 @@ This simple project is to explore the command line capabilites for Extract, Comp
 Here is a suggestion to add such features to sqlOS:
 [SSDT-style Import from database and sqlpackage.exe integration (extract, compare, update, publish, etc.)](https://github.com/Microsoft/sqlopsstudio/issues/389)
 
+
+<img src="demo.gif" width="800" height="400" />
+
 https://github.com/Microsoft/sqlopsstudio/issues/389
 ## **Prerequisites:**
 - Install the following:
