@@ -6,11 +6,13 @@ SET Options=--file-per-object --exclude-use-database --script-drop-create --disp
 SET Options2=--file-per-object --exclude-use-database --script-drop-create --check-for-existence --display-progress --connection-string %SourceConnString%
 SET Options3=--exclude-use-database --display-progress --connection-string %SourceConnString%
 
+md %SourcePath%
+
 rem - script CREATE database
 call mssql-scripter -f %SourcePath%\CreateDB_%Source%.sql %Options3%
 
 rem - script Tables
-call mssql-scripter -f %SourcePathh%\Tables\ --include-types Table %Options%
+call mssql-scripter -f %SourcePath%\Tables\ --include-types Table %Options%
 
 rem - script Views
 call mssql-scripter -f %SourcePath%\Views\ --include-types View %Options%
