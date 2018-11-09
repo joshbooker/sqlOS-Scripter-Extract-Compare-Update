@@ -9,7 +9,7 @@ SET SourceServer=(local)
 rem --SQL Server Name
 SET TargetServer=(local)
 rem --Path of this project
-SET ProjectPath=C:\SOURCE\SQLOps\TestProject
+SET ProjectPath=C:\SOURCE\SQLOps\TestProject1
 rem --directory in project to output create scripts
 SET DbsPath=DATABASES
 rem --directory in project to output dacpac files
@@ -19,7 +19,7 @@ SET SQLPath=MIGRATIONS
 rem --sourece database name
 SET Source=TEST1
 rem --target database name
-SET Target=TEST4
+SET Target=TEST2
 rem --version string for Migration Script file name
 SET MigrationTag=2018-11-10
 
