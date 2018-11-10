@@ -63,18 +63,18 @@ Now you have one Create script per object in the source database organized in yo
   
 You now have two empty databases.
   
+![Alt Text](https://joshbooker.github.io/DEMO2_createDBs.gif)
+
 - open `Entity.sql` and execute on source database
 
 You now have a table called `Entity` in the source db.
-
-![Alt Text](https://joshbooker.github.io/DEMO2_createDBs.gif)
 
 ### **Extract, Compare, Update:**   
 - execute the following in cmd terminal
   - `extract.cmd`
   - `compare.cmd`
   
-This will execute sqlpackage.exe to create dacpacs and a delta script called `%DatabaseName%_CompareUpdate_%UpdateVersion%.sqlcmd.sql` showing the diffenece in schema between the two dbs.   
+This will execute sqlpackage.exe to create dacpacs and a delta script called `%DatabaseName%_Migration_%MigrationTag%.sqlcmd.sql` showing the diffenece in schema between the two dbs.   
 **Neat!**
   
 - execute the following in cmd terminal
@@ -83,6 +83,8 @@ This will execute sqlpackage.exe to create dacpacs and a delta script called `%D
 This will execute sqlcmd.exe to apply the delta script to the target db.
 Now your databases are the same.   
 **Woot!**
+  
+![Alt Text](https://joshbooker.github.io/DEMO4_extractCompareUpdate.gif)
 
 
 ### **Make a change and test compare (optional):**   
@@ -98,7 +100,12 @@ Now you should have a new delta update script.
   - `update.cmd` 
 
 Now your databases are the same again.
+  
+![Alt Text](https://joshbooker.github.io/DEMO5_compareUpdate.gif)
 
 If you extract and compare again you'll get a delta script that doesn't make any changes.
 
-**Hint:**  Don't forget to change UpdateVersion variable in `environment.bat` between each compare or it will overwrite the prior delta script.
+  
+![Alt Text](https://joshbooker.github.io/DEMO6_noDelta.gif)
+ 
+**Hint:**  Don't forget to change MigrationTag variable in `environment.bat` between each compare or it will overwrite the prior delta script.
